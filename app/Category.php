@@ -14,7 +14,7 @@ class Category extends Model
      *
      * @var array
      */
-    protected $fillable = ['id', 'name', 'discription'];
+    protected $fillable = ['id', 'name', 'description'];
 
     /**
      * Make relationship to book.
