@@ -19,3 +19,21 @@ $factory->define(App\User::class, function (Faker\Generator $faker) {
         'remember_token' => str_random(10),
     ];
 });
+
+$factory->define(App\PhpSpec\Categories::class, function (Faker\Generator $faker) {
+    return [
+        'name'        => $faker->name,
+        'description' => $faker->description
+    ];
+});
+
+$factory->define(App\PhpSpec\Book::class, function (Faker\Generator $faker) {
+    return [
+        'name'        => $faker->name,
+        'category_id' => rand(1,100),
+        'author'      => $faker->author,
+        'publisher'   => $faker->publisher,
+        'year_publish'=> $faker->year_publish,
+        'price'       => rand(10000, 100000)
+    ];
+});
