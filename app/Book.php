@@ -25,4 +25,15 @@ class Book extends Model
     {
         return $this->belongsTo('App\PhpSpec\Model\Category', 'category_id'); // @codeCoverageIgnore
     }
+
+    /**
+    * Create the model in the database.
+    *
+    * @param $attributes
+    * @return bool|int
+    */
+    public static function create(array $attributes = [])
+    {
+        return parent::create($attributes)->fresh();
+    }
 }
