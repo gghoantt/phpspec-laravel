@@ -3,11 +3,11 @@
 namespace App\Http\Controllers;
 
 use Validator;
-use App\Http\Requests;
-use App\Http\Controllers;
-use App\PhpSpec\Model\Category;
+use App\PhpSpec\Models\Category;
+use App\Http\Controllers\Controller;
+use Illuminate\Http\Request;
 
-class CategoryController extends Controllers
+class CategoryController extends Controller
 {
     public function create(Request $request)
     {

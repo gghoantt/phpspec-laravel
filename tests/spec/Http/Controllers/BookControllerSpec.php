@@ -3,21 +3,12 @@
 namespace spec\App\Http\Controllers;
 
 use Tests\SpecTestCase;
+use PhpSpec\ObjectBehavior;
 
-class BookControllerSpec extends SpecTestCase
+class BookControllerSpec extends ObjectBehavior
 {
     function it_is_initializable()
     {
         $this->shouldHaveType('App\Http\Controllers\BookController');
-    }
-
-    function it_converts_plain_text_to_html_paragraphs()
-    {
-        $this->toHtml("Hi, there")->shouldReturn("<p>Hi, there</p>");
-    }
-
-    function it_converts_plain_text_to_html_paragraphs1()
-    {
-        $this->toHtml("Hi, there")->shouldReturn("<p>Hi, there</p>");
     }
 }

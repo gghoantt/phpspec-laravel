@@ -1,6 +1,6 @@
 <?php
 
-$this->extract($division, [
+$this->extract($category, [
     'id',
     'name',
     'description',
