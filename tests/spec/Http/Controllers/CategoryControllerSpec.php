@@ -31,13 +31,14 @@ class CategoryControllerSpec extends SpecTestCase
     function it_should_be_create(Request $request)
     {
         $request->all()->willReturn([
-            'name'        => 'Novel',
-            'description' => 'Novel'
+            'name'        => 'Books',
+            'description' => 'Books'
         ]);
 
         $res = $this->create($request);
         $this->create($request)->shouldReturnAnInstanceOf('Illuminate\Http\JsonResponse');
         $res->getStatusCode()->shouldReturn(201);
-        $result = $this->create($request)->getWrappedObject();
+        $res->getContent()->shouldhaveKeyMatchValue('name', 'Books');
+        $res->getContent()->shouldhaveKeyMatchValue('description', 'Books');
     }
 }
