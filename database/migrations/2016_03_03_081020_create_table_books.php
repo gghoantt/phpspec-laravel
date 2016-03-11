@@ -23,7 +23,7 @@ class CreateTableBooks extends Migration
             $table->integer('price');
             $table->timestamps();
 
-            $table->foregin('category_id')
+            $table->foreign('category_id')
                 ->references('id')->on('categories')
                 ->onDelete('cascade')
                 ->onUpdate('cascade');

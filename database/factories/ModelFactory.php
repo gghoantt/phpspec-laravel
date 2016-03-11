@@ -20,14 +20,14 @@ $factory->define(App\User::class, function (Faker\Generator $faker) {
     ];
 });
 
-$factory->define(App\PhpSpec\Categories::class, function (Faker\Generator $faker) {
+$factory->define(App\PhpSpec\Models\Category::class, function (Faker\Generator $faker) {
     return [
         'name'        => $faker->name,
-        'description' => $faker->description
+        'description' => 'description'
     ];
 });
 
-$factory->define(App\PhpSpec\Book::class, function (Faker\Generator $faker) {
+$factory->define(App\PhpSpec\Models\Book::class, function (Faker\Generator $faker) {
     return [
         'name'        => $faker->name,
         'category_id' => rand(1,100),

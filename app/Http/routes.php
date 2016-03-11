@@ -29,3 +29,5 @@ Route::get('/', function () {
 Route::group(['middleware' => ['web']], function () {
     //
 });
+
+Route::post('/categories', 'App\Http\Controllers\CategoryController@store');
